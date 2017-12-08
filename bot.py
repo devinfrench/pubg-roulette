@@ -1,6 +1,7 @@
 import discord
 import random
 import argparse
+import json
 
 
 class Game:
@@ -8,57 +9,7 @@ class Game:
         self.title = title
         self.description = description
 
-games = [
-    Game(
-        "Vape Nation",
-        "You must throw a smoke grenade towards an enemy before engaging."
-    ),
-    Game(
-        "Respect the Dead",
-        "No looting bodies."
-    ),
-    Game(
-        "Fuckboy",
-        "You can only loot fuckboy shacks."
-    ),
-    Game(
-        "Minimalism",
-        "You can not use a backpack."
-    ),
-    Game(
-        "Bird Watcher",
-        "You must go to every airdrop you see falling."
-    ),
-    Game(
-        "Viking Funeral",
-        "Throw a Molotov on an enemy after killing them."
-    ),
-    Game(
-        "Grounded",
-        "You can only loot the bottom floor of any structure."
-    ),
-    Game(
-        "Roadrage",
-        "Only vehicle kills. No guns or grenades."
-    ),
-    Game(
-        "Call of Duty Master",
-        "No-scoping only."
-    ),
-    Game(
-        "Hitman",
-        "Silenced pistol only with any other attachments. No armor or helmet."
-    ),
-    Game(
-        "This Is My Rifle",
-        "The first gun you find is the only weapon you can use for the entire game."
-    ),
-    Game(
-        "Origin",
-        "Go to the center of the circle as fast as you can every time the circle shrinks."
-    )
-]
-
+games = json.load(open('games.json'))
 client = discord.Client()
 
 
@@ -75,7 +26,7 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith("!pubg") or message.content.startswith("!strat"):
         game = random.choice(games)
-        embed = discord.Embed(title=game.title, description=game.description, color=0xff4500)
+        embed = discord.Embed(title=game["title"], description=game["description"], color=0xff4500)
         await client.send_message(message.channel, embed=embed)
 
 

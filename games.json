@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Vape Nation",
+    "description": "You must throw a smoke grenade towards an enemy before engaging."
+  },
+  {
+    "title": "Respect the Dead",
+    "description": "No looting bodies."
+  },
+  {
+    "title": "Fuckboy",
+    "description": "You can only loot fuckboy shacks."
+  },
+  {
+    "title": "Minimalism",
+    "description": "You can not use a backpack."
+  },
+  {
+    "title": "Bird Watcher",
+    "description": "You must go to every airdrop you see falling."
+  },
+  {
+    "title": "Viking Funeral",
+    "description": "Throw a Molotov on an enemy after killing them."
+  },
+  {
+    "title": "Grounded",
+    "description": "You can only loot the ground floor of any structure."
+  },
+  {
+    "title": "Road Rage",
+    "description": "Only vehicle kills. No guns or grenades."
+  },
+  {
+    "title": "Call of Duty Master",
+    "description": "No-scoping only."
+  },
+  {
+    "title": "Hitman",
+    "description": "Silenced pistol only with any other attachments. No armor or helmet."
+  },
+  {
+    "title": "This is my Rifle",
+    "description": "The first gun you find is the only weapon you can use for the entire game."
+  },
+  {
+    "title": "Origin",
+    "description": "Go to the center of the circle as fast as you can every time the circle shrinks."
+  }
+]
