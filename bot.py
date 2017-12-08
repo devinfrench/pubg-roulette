@@ -3,12 +3,6 @@ import random
 import argparse
 import json
 
-
-class Game:
-    def __init__(self, title, description):
-        self.title = title
-        self.description = description
-
 strats = json.load(open('strats.json'))
 client = discord.Client()
 
