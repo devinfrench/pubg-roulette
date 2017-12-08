@@ -9,7 +9,7 @@ class Game:
         self.title = title
         self.description = description
 
-games = json.load(open('games.json'))
+strats = json.load(open('strats.json'))
 client = discord.Client()
 
 
@@ -25,8 +25,8 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("!pubg") or message.content.startswith("!strat"):
-        game = random.choice(games)
-        embed = discord.Embed(title=game["title"], description=game["description"], color=0xff4500)
+        strat = random.choice(strats)
+        embed = discord.Embed(title=strat["title"], description=strat["description"], color=0xff4500)
         await client.send_message(message.channel, embed=embed)
 
 
